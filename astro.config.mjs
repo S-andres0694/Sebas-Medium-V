@@ -5,13 +5,13 @@ import sitemap from '@astrojs/sitemap';
 
 import tailwindcss from '@tailwindcss/vite';
 
-import react from '@astrojs/react';
+import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  integrations: [mdx(), sitemap(), react()],
-
+  integrations: [mdx(), sitemap(), icon()],
+  prefetch: true,
   vite: {
     plugins: [tailwindcss()],
   },
