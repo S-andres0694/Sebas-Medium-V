@@ -14,7 +14,7 @@ export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), sitemap(), icon()],
   prefetch: true,
-  output: 'server',
+  output: 'static',
 
   vite: {
     plugins: [tailwindcss()],
