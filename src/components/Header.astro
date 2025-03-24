@@ -11,10 +11,13 @@ import GithubLogo from './GithubLogo.astro';
 import LinkedinLogo from './LinkedinLogo.astro';
 ---
 
-<header>
-	<nav>
-		<h2>
-			<a href="/" class="flex items-center gap-2">
+<header class="m-0 py-0 px-4 bg-white shadow-md">
+	<nav class="flex items-center justify-between">
+		<h2 class="!m-0 text-base">
+			<a
+				href="/"
+				class="!flex !items-center !gap-2 !py-4 !px-2 !text-black !border-b-4 !border-transparent !no-underline"
+			>
 				<BlogLogo
 					className="border-2 border-blue-700 rounded-full w-10 h-10 p-0.5"
 					color="#001eff"
@@ -27,36 +30,28 @@ import LinkedinLogo from './LinkedinLogo.astro';
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<div class="social-links">
-			<a href={SITE_GITHUB_URL} target="_blank">
+		<div class="flex items-center gap-2">
+			<a
+				href={SITE_GITHUB_URL}
+				target="_blank"
+				class="!py-4 !px-2 !text-black !border-b-4 !border-transparent !no-underline"
+			>
 				<GithubLogo color={SITE_LOGO_COLOR} className="w-10 h-10" />
 			</a>
-			<a href={SITE_LINKEDIN_URL} target="_blank">
+			<a
+				href={SITE_LINKEDIN_URL}
+				target="_blank"
+				class="!py-4 !px-2 !text-black !border-b-4 !border-transparent !no-underline"
+			>
 				<LinkedinLogo color={SITE_LOGO_COLOR} className="w-10 h-10" />
 			</a>
 		</div>
 	</nav>
 </header>
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -64,6 +59,7 @@ import LinkedinLogo from './LinkedinLogo.astro';
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
+
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);

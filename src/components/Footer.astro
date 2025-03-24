@@ -6,17 +6,25 @@ import LinkedinLogo from './LinkedinLogo.astro';
 const today = new Date();
 ---
 
-<footer>
+<footer class="pt-8 pr-4 pb-24 pl-4 text-lg text-gray-500 text-center">
 	&copy; {today.getFullYear()} Sebastian El Khoury. All rights reserved.
 	<p>
 		Created with <a href="https://astro.build/">Astro</a>
 	</p>
-	<div class="social-links">
-		<a href={SITE_GITHUB_URL} target="_blank">
+	<div class="flex justify-center gap-4 mt-4">
+		<a
+			href={SITE_GITHUB_URL}
+			target="_blank"
+			class="no-underline text-gray-500 hover:text-gray-700"
+		>
 			<span class="sr-only">Go to my GitHub repo</span>
 			<GithubLogo color={SITE_LOGO_COLOR} className="w-10 h-10" />
 		</a>
-		<a href={SITE_LINKEDIN_URL} target="_blank">
+		<a
+			href={SITE_LINKEDIN_URL}
+			target="_blank"
+			class="no-underline text-gray-500 hover:text-gray-700"
+		>
 			<span class="sr-only">Go to my LinkedIn profile</span>
 			<LinkedinLogo color={SITE_LOGO_COLOR} className="w-10 h-10" />
 		</a>
@@ -24,22 +32,6 @@ const today = new Date();
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
 	}
 </style>
