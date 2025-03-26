@@ -8,7 +8,7 @@ const { className = '', color = 'currentColor' }: Props = Astro.props;
 ---
 
 <svg
-	class={className}
+	class={`${className} transition-transform transform hover:scale-110`}
 	viewBox="0 0 16 16"
 	aria-hidden="true"
 	width="32"
