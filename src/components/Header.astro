@@ -11,7 +11,7 @@ import GithubLogo from './GithubLogo.astro';
 import LinkedinLogo from './LinkedinLogo.astro';
 ---
 
-<header class="m-0 py-0 px-4 bg-white shadow-md">
+<header class="m-0 py-0 px-4 bg-white dark:bg-[#121212] shadow-md">
 	<nav class="flex items-center justify-between">
 		<h2 class="!m-0 text-base">
 			<a
@@ -21,6 +21,7 @@ import LinkedinLogo from './LinkedinLogo.astro';
 				<BlogLogo
 					className="border-2 border-blue-700 rounded-full w-10 h-10 p-0.5"
 					color="#001eff"
+					darkColor="!important #fb7ae3"
 				/>
 				<span class="text-xl">{SITE_TITLE}</span>
 			</a>

@@ -8,9 +8,10 @@
 interface Props {
 	className?: string; // Optional class name for styling
 	color?: string; // Optional color for the logo
+	darkColor?: string; // Optional color for the logo in dark mode
 }
 
-const { className = '', color = '#001eff' }: Props = Astro.props;
+const { className = '', color = '#001eff', darkColor = '#fb7ae3' }: Props = Astro.props;
 const profile: string | boolean = await fetch(
 	'https://api.github.com/users/S-andres0694',
 )
@@ -30,8 +31,7 @@ const profile: string | boolean = await fetch(
 		/>
 	) : (
 		<svg
-			class={className}
-			fill={color}
+			class={`${className} !fill-[${color}] dark:!fill-[${darkColor}]`}
 			viewBox="0 0 1069 1069"
 			style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
 			version="1.1"
